@@ -1,3 +1,4 @@
+
 import os
 
 def read_from_file():
@@ -86,13 +87,15 @@ def decode():
 
     
 def Launch():
-    choice = input('[e]ncode or [d]ecode? ')
+    try: 
+      choice = input('[e]ncode or [d]ecode? ')
+    except KeyboardInterrupt:
+      Launch()
     if choice == 'e':
         encode()
     elif choice == 'd':
         decode()
-    else:
-        Launch()
+    Launch()
 
 RUN = True
 if __name__ == '__main__':
@@ -104,4 +107,4 @@ if __name__ == '__main__':
             exit()
             
         
-        
+     
