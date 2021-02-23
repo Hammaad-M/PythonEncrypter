@@ -2,14 +2,12 @@
 import os
 
 def read_from_file():
-    try: 
-        file = open(r"key.txt", 'r')
-        contents = file.readline()
-        print("following key found: " + contents)
-        file.close()
-    except FileNotFoundError:
-        print("key.txt not found in local directory...")
-        return False
+
+    file = open(r"key.txt", 'r')
+    contents = file.readline()
+    print("following key found: " + contents)
+    file.close()
+    
     return contents
 
 def encode():
