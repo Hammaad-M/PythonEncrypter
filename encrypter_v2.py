@@ -5,6 +5,7 @@ def read_from_file():
 
     file = open(r"key.txt", 'r')
     contents = file.readline()
+    contents = contents.rstrip("\n")
     print("following key found: " + contents)
     file.close()
     
