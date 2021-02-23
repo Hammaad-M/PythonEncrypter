@@ -24,7 +24,7 @@ def encode():
     if key == 'f':
         key = read_from_file()
         if key == False:
-            decode()
+            encode()
     text = list(input('enter message you wish to encrypt: '))
     a = 0
     output = ''  
